@@ -1090,7 +1090,7 @@ label, button {
     height: 60px;
   }
   .for__video {
-    height: 200px;
+    height: 220px;
     background: url(../img/other/2.svg) center/cover no-repeat;
   }
   .for__question_mobile {
@@ -3330,6 +3330,13 @@ label, button {
 @media (max-width: 405px) {
   .footer__left {
     margin-left: -22%;
+  }
+  .footer ul li a {
+    font-size: 14px;
+  }
+  .footer ul li div p {
+    font-size: 14px;
+    line-height: 24px;
   }
   .footer ul li div p br {
     display: none;

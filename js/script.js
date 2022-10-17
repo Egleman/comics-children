@@ -140,7 +140,6 @@ close.addEventListener('click', (e) => {
 });
 const scroll = () => {
   const buttons = document.querySelectorAll('a[scroll]');
-  console.log(buttons)
   const menu = document.querySelector('.header__burger');
   buttons.forEach(btn => {
       btn.addEventListener('click', (e) => {
