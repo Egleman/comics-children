@@ -88,20 +88,27 @@ const calcWidthScroll = () => {
 
       div.remove();
       document.body.style.minWidth = (320 - scrollWidth) + 'px';
+      document.querySelector('.modal').style.minWidth = (320 - scrollWidth) + 'px';
+      document.querySelector('.modal__dialog').style.minWidth = (320 - scrollWidth) + 'px';
 }
 calcWidthScroll();
 
 const blockBody = () => {
   const body = document.body;
-  body.style.overflow = 'hidden';
+  const page = document.querySelector('html');
+  body.style.overflowY = 'hidden';
+  page.style.overflowY = 'hidden';
   const bodyScroll = calcScroll();
-  body.style.marginRight = `${bodyScroll}px`;
+  // body.style.marginRight = `${bodyScroll}px`;
+  page.style.marginRight = `${bodyScroll}px`;
 }
 
 const unBlockBody = () => {
   const body = document.body;
-  body.style.overflow = 'auto';
-  body.style.marginRight = `0`;
+  const page = document.querySelector('html');
+  body.style.overflowY = 'auto';
+  page.style.overflowY = 'auto';
+  page.style.marginRight = `0`;
 }
 
 const calcScroll = () => {
@@ -120,7 +127,6 @@ const modalButtons = document.querySelectorAll('[data-button="modal"]');
 const modal = document.querySelector('.modal');
 const close = document.querySelector('.modal__close');
 modalButtons.forEach(btn => {
-  console.log(btn)
   btn.addEventListener('click', (e) => {
       e.preventDefault();
       modal.classList.add('modal_active');
@@ -132,3 +138,36 @@ close.addEventListener('click', (e) => {
   modal.classList.toggle('modal_active');
   unBlockBody();
 });
+const scroll = () => {
+  const buttons = document.querySelectorAll('a[scroll]');
+  console.log(buttons)
+  const menu = document.querySelector('.header__burger');
+  buttons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const blockId = btn.getAttribute('href');
+          if (menu.classList.contains('header__burger_active')) {
+              menu.classList.remove('header__burger_active')
+          }
+          document.querySelector(blockId).scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+          });
+      })
+  })
+}
+scroll();
+const maskInputs = () => {
+  const inputs = document.querySelectorAll('input[data-input="tel"]');
+  inputs.forEach(input => {
+      let im = new Inputmask({
+          mask: '(+7|8) (999) 999-99-99',
+          showMaskOnHover: false,
+          showMaskOnFocus: false,
+          jitMasking: true,
+          inputmode: 'tel'
+      });
+      im.mask(input);
+  })
+}
+maskInputs();

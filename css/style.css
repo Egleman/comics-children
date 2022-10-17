@@ -134,7 +134,6 @@ label, button {
   transition: 0.3s;
   padding: 0px 15px;
   box-sizing: border-box;
-  overflow-y: auto;
 }
 .modal_active {
   z-index: 11;
@@ -164,6 +163,7 @@ label, button {
   line-height: 61px;
   color: #FFC107;
   transform: rotate(-45deg);
+  z-index: 3;
 }
 .modal__header {
   font-family: "Housearama", sans-serif;
@@ -190,6 +190,8 @@ label, button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 1;
+  position: relative;
 }
 .modal__form form button {
   background: #8F3EB0;
@@ -321,6 +323,10 @@ label, button {
     text-align: left;
     width: 100%;
     box-sizing: border-box;
+  }
+  .modal__scroll {
+    height: 700px;
+    overflow-y: scroll;
   }
 }
 @media (max-width: 470px) {
@@ -2863,7 +2869,7 @@ label, button {
 }
 @media (max-width: 606px) {
   .reviews {
-    padding: 110px 0px 215px 0px;
+    padding: 110px 0px 140px 0px;
   }
   .reviews__right {
     width: 303px;

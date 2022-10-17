@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=scrollIntoView" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js" defer></script>
+    <script src="js/inputmask.js" defer></script>
     <script src="js/script.js" defer></script>
 </head>
 <body>
@@ -48,10 +49,10 @@
         </div>
         <div class="header__burger" data-block="hidden-menu">
             <ul>
-                <li><a href="#">Идея</a></li>
-                <li><a href="#">Команда</a></li>
-                <li><a href="#">Пакеты подписки</a></li>
-                <li><a href="#">+7 (921) 971-90-76</a></li>
+                <li><a href="#idea" scroll>Идея</a></li>
+                <li><a href="#team" scroll>Команда</a></li>
+                <li><a href="#tariffs" scroll>Пакеты подписки</a></li>
+                <li><a href="tel:79219719076">+7 (921) 971-90-76</a></li>
             </ul>
             <div class="header__right-soc header__right-soc_burger">
                 <a href="#">
@@ -74,7 +75,7 @@
                         <div class="banner__family">
                             <img src="./img/bg/family.png" alt="family">
                         </div>
-                        <a href="#" class="banner__button">ВЫБРАТЬ ПОДПИСКУ</a>
+                        <a href="#tariffs" scroll class="banner__button">ВЫБРАТЬ ПОДПИСКУ</a>
                     </div>
                     <div class="banner__right">
                         <div class="banner__right-wr">
@@ -83,7 +84,7 @@
                             </div>
                             <p>КОМИКСЫ<br> ДЛЯ МАЛЬЧИШЕК</p>
                         </div>
-                        <a href="#" class="banner__button banner__button_mobile">ВЫБРАТЬ ПОДПИСКУ</a>
+                        <a href="#tariffs" scroll class="banner__button banner__button_mobile">ВЫБРАТЬ ПОДПИСКУ</a>
                         <ul>
                             <li>
                                 <div>
@@ -396,7 +397,7 @@
                         </button>
                     </div>
                 </div>
-                <a href="#" class="when__button">ПРОСМОТРЕТЬ ПОДПИСКИ</a>
+                <a href="#tariffs" scroll class="when__button">ПРОСМОТРЕТЬ ПОДПИСКИ</a>
             </div>
         </section>
         <section class="demo">
@@ -407,7 +408,7 @@
                 <img src="./img/icons/18.svg" alt="prev">
             </div>
             <div class="container">
-                <div class="demo__position">
+                <div class="demo__position" id="idea">
                     <div class="demo__text-1">
                         <img src="./img/other/17.png" alt="img">
                         <p>В чем же главная<br> идея комиксов?</p>
@@ -523,7 +524,7 @@
                     </picture>
                     <p>или можно купить в виде журнала на маркетплейсах</p>
                 </div>
-                <div class="tariffs__grid">
+                <div class="tariffs__grid" id="tariffs">
                     <div class="tariffs__card">
                         <div class="tariffs__card-burger">
                             <svg width="50" height="40" viewBox="0 0 50 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -670,7 +671,7 @@
                 </div>
             </div>
         </section>
-        <section class="team">
+        <section class="team" id="team">
             <div class="team__prev">
                 <img src="./img/icons/19.svg" alt="line">
             </div>
@@ -890,7 +891,7 @@
                         </svg>
                     </button>
                 </div>
-                <a href="#" class="reviews__button">ВЫБРАТЬ ПОДПИСКУ</a>
+                <a href="#tariffs" scroll class="reviews__button">ВЫБРАТЬ ПОДПИСКУ</a>
             </div>
         </section>
         <section class="faq">
@@ -1061,75 +1062,77 @@
             <a href="#" class="modal__close">
                 +                                  
             </a>
-            <div class="modal__header">
-                заполните необходимые данные,<br> чтобы заказать комиксы
-            </div>
-            <div class="modal__wrapper">
-                <div class="modal__form">
-                    <form action="#">
-                        <div class="modal__form-input">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_136_36)">
-                                <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="#FFC107" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M13.3432 6.75H10.6568C9.74179 6.75 9 7.49179 9 8.40684V11.5932C9 12.5082 9.74179 13.25 10.6568 13.25H13.3432C14.2582 13.25 15 12.5082 15 11.5932V8.40684C15 7.49179 14.2582 6.75 13.3432 6.75Z" stroke="#FFC107" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M5.63574 18.364V18.364C7.14932 16.8504 9.20219 16 11.3427 16H12.5557H12.5557C14.1492 16.0001 15.707 16.4719 17.0327 17.356L18.4327 18.288" stroke="#FFC107" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </g>
-                                <defs>
-                                <clipPath id="clip0_136_36">
-                                <rect width="24" height="24" fill="white"/>
-                                </clipPath>
-                                </defs>
-                            </svg>
-                            <input type="text" name="name" placeholder="Ваше Имя">
-                        </div>
-                        <div class="modal__form-input">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_136_52)">
-                                <path d="M4.636 5.04492H19.363C20.267 5.04492 21 5.77792 21 6.68192V17.3179C21 18.2219 20.267 18.9539 19.364 18.9539H4.636C3.733 18.9549 3 18.2219 3 17.3179V6.68192C3 5.77792 3.733 5.04492 4.636 5.04492V5.04492Z" stroke="#FFC107" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M3.11914 6.07504L10.8131 11.578C11.5081 12.075 12.4421 12.076 13.1381 11.58L20.8761 6.06104" stroke="#FFC107" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </g>
-                                <defs>
-                                <clipPath id="clip0_136_52">
-                                <rect width="24" height="24" fill="white"/>
-                                </clipPath>
-                                </defs>
-                            </svg>                                
-                            <input type="text" name="email" placeholder="E-mail">
-                        </div>
-                        <div class="modal__form-input">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_136_71)">
-                                <path d="M10.8561 13.1439C9.68615 11.9739 8.80415 10.6639 8.21815 9.33487C8.09415 9.05387 8.16715 8.72487 8.38415 8.50787L9.20315 7.68987C9.87415 7.01887 9.87415 6.06987 9.28815 5.48387L8.11415 4.30987C7.33315 3.52887 6.06715 3.52887 5.28615 4.30987L4.63415 4.96187C3.89315 5.70287 3.58415 6.77187 3.78415 7.83187C4.27815 10.4449 5.79615 13.3059 8.24515 15.7549C10.6941 18.2039 13.5551 19.7219 16.1681 20.2159C17.2281 20.4159 18.2971 20.1069 19.0381 19.3659L19.6891 18.7149C20.4701 17.9339 20.4701 16.6679 19.6891 15.8869L18.5161 14.7139C17.9301 14.1279 16.9801 14.1279 16.3951 14.7139L15.4921 15.6179C15.2751 15.8349 14.9461 15.9079 14.6651 15.7839C13.3361 15.1969 12.0261 14.3139 10.8561 13.1439V13.1439Z" stroke="#FFC107" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </g>
-                                <defs>
-                                <clipPath id="clip0_136_71">
-                                <rect width="24" height="24" fill="white"/>
-                                </clipPath>
-                                </defs>
-                            </svg>                                                                
-                            <input type="text" name="phone" placeholder="Номер телефона">
-                        </div>
-                        <button type="submit">КУПИТЬ ПАКЕТ</button>
-                    </form>
+            <div class="modal__scroll">
+                <div class="modal__header">
+                    заполните необходимые данные,<br> чтобы заказать комиксы
                 </div>
-                <div class="modal__desc">
-                    <p class="modal__result">Вы выбрали:</p>
-                    <div class="tariffs__card-option">
-                        <img src="./img/icons/star.png" alt="star">
-                        <div>
-                            <p>12 комиксов "НА ПРИМЕР"</p>
-                            <span>Комиксы по 12 актуальным темам для мальчиков 6-11 лет</span>
-                        </div>
+                <div class="modal__wrapper">
+                    <div class="modal__form">
+                        <form action="#">
+                            <div class="modal__form-input">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_136_36)">
+                                    <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="#FFC107" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M13.3432 6.75H10.6568C9.74179 6.75 9 7.49179 9 8.40684V11.5932C9 12.5082 9.74179 13.25 10.6568 13.25H13.3432C14.2582 13.25 15 12.5082 15 11.5932V8.40684C15 7.49179 14.2582 6.75 13.3432 6.75Z" stroke="#FFC107" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M5.63574 18.364V18.364C7.14932 16.8504 9.20219 16 11.3427 16H12.5557H12.5557C14.1492 16.0001 15.707 16.4719 17.0327 17.356L18.4327 18.288" stroke="#FFC107" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_136_36">
+                                    <rect width="24" height="24" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                                <input type="text" name="name" placeholder="Ваше Имя">
+                            </div>
+                            <div class="modal__form-input">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_136_52)">
+                                    <path d="M4.636 5.04492H19.363C20.267 5.04492 21 5.77792 21 6.68192V17.3179C21 18.2219 20.267 18.9539 19.364 18.9539H4.636C3.733 18.9549 3 18.2219 3 17.3179V6.68192C3 5.77792 3.733 5.04492 4.636 5.04492V5.04492Z" stroke="#FFC107" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M3.11914 6.07504L10.8131 11.578C11.5081 12.075 12.4421 12.076 13.1381 11.58L20.8761 6.06104" stroke="#FFC107" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_136_52">
+                                    <rect width="24" height="24" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>                                
+                                <input type="text" name="email" placeholder="E-mail">
+                            </div>
+                            <div class="modal__form-input">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_136_71)">
+                                    <path d="M10.8561 13.1439C9.68615 11.9739 8.80415 10.6639 8.21815 9.33487C8.09415 9.05387 8.16715 8.72487 8.38415 8.50787L9.20315 7.68987C9.87415 7.01887 9.87415 6.06987 9.28815 5.48387L8.11415 4.30987C7.33315 3.52887 6.06715 3.52887 5.28615 4.30987L4.63415 4.96187C3.89315 5.70287 3.58415 6.77187 3.78415 7.83187C4.27815 10.4449 5.79615 13.3059 8.24515 15.7549C10.6941 18.2039 13.5551 19.7219 16.1681 20.2159C17.2281 20.4159 18.2971 20.1069 19.0381 19.3659L19.6891 18.7149C20.4701 17.9339 20.4701 16.6679 19.6891 15.8869L18.5161 14.7139C17.9301 14.1279 16.9801 14.1279 16.3951 14.7139L15.4921 15.6179C15.2751 15.8349 14.9461 15.9079 14.6651 15.7839C13.3361 15.1969 12.0261 14.3139 10.8561 13.1439V13.1439Z" stroke="#FFC107" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_136_71">
+                                    <rect width="24" height="24" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>                                                                
+                                <input type="text" name="phone" data-input="tel" placeholder="Номер телефона">
+                            </div>
+                            <button type="submit">КУПИТЬ ПАКЕТ</button>
+                        </form>
                     </div>
-                    <div class="tariffs__card-option">
-                        <img src="./img/icons/star.png" alt="star">
-                        <div>
-                            <p>PDF-файлы, доступные для скачивания﻿</p>
+                    <div class="modal__desc">
+                        <p class="modal__result">Вы выбрали:</p>
+                        <div class="tariffs__card-option">
+                            <img src="./img/icons/star.png" alt="star">
+                            <div>
+                                <p>12 комиксов "НА ПРИМЕР"</p>
+                                <span>Комиксы по 12 актуальным темам для мальчиков 6-11 лет</span>
+                            </div>
                         </div>
+                        <div class="tariffs__card-option">
+                            <img src="./img/icons/star.png" alt="star">
+                            <div>
+                                <p>PDF-файлы, доступные для скачивания﻿</p>
+                            </div>
+                        </div>
+                        <p class="modal__result">Итоговая стоимость:</p>
+                        <div class="tariffs__card-price tariffs__card-price_modal">1680 ₽</div>
+                        <div class="tariffs__card-count tariffs__card-count_modal">140 ₽ за шт.</div>
                     </div>
-                    <p class="modal__result">Итоговая стоимость:</p>
-                    <div class="tariffs__card-price tariffs__card-price_modal">1680 ₽</div>
-                    <div class="tariffs__card-count tariffs__card-count_modal">140 ₽ за шт.</div>
                 </div>
             </div>
         </div>
