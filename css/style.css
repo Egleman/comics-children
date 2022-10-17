@@ -1102,7 +1102,12 @@ label, button {
     line-height: 17px;
   }
   .for__content_3 {
-    height: 150px;
+    height: 200px;
+  }
+}
+@media (max-width: 350px) {
+  .for__content_3 {
+    height: 170px;
   }
 }
 .when {

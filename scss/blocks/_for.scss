@@ -395,7 +395,16 @@
         }
         &__content {
             &_3 {
-                height: 150px;
+                height: 200px;
+            }
+        }
+    }
+}
+@media (max-width: 350px) {
+    .for {
+        &__content {
+            &_3 {
+                height: 170px;
             }
         }
     }
