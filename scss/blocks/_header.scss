@@ -1,0 +1,188 @@
+.header {
+    background: #8F3EB0;
+    position: relative;
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        position: relative;
+        height: 80px;
+    }
+    &__nav {
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+            li {
+                a {
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 32px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    &__logo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__right {
+        display: flex;
+        align-items: center;
+        gap: 90px;
+        &-number {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 32px;
+            color: #fff;
+        }
+        &-soc {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            a {
+                display: flex;
+                max-width: 30px;
+                width: 100%;
+                border-radius: 100%;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        &-menu {
+            display: none;
+            background: transparent;
+            border: none;
+            padding: 0;
+            span {
+                display: none;
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 50px;
+                line-height: 61px;
+                color: #FFC107;
+                transform: rotate(-45deg);
+            }
+            &_active {
+                svg {
+                    display: none;
+                }
+                span {
+                    display: flex;
+                }
+            }
+        }
+    }
+    &__burger {
+        padding: 35px 0px;
+        position: absolute;
+        width: 100%;
+        top: 99%;
+        background: #8F3EB0;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+        transition: .3s all;
+        opacity: 0;
+        &_active {
+            visibility: visible;
+            opacity: 1;
+        }
+        ul {
+            width: 100%;
+            margin-bottom: 30px;
+            li {
+                width: 100%;
+                border-top: 1px solid #fff;
+                &:last-of-type {
+                    border-bottom: 1px solid #fff;
+                }
+                a {
+                    padding: 20px 0px;
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 32px;
+                    color: #fff;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1230px) {
+    .header {
+        &__nav {
+            ul {
+                gap: 50px;
+            }
+        }
+        &__right {
+            gap: 60px;
+        }
+    }
+}
+@media (max-width: 1022px) {
+    .header {
+        &__nav {
+            ul {
+                gap: 30px;
+            }
+        }
+        &__right {
+            gap: 20px;
+        }
+    }
+}
+@media (max-width: 798px) {
+    .header {
+        &__wrapper {
+            height: 60px;
+        }
+        &__nav {
+            display: none;
+        }
+        &__logo {
+            transform: translate(0, 0);
+            position: static;
+            max-width: 60px;
+            width: 100%;
+        }
+        &__right {
+            gap: 0;
+            &-number {
+                display: none;
+            }
+            &-soc {
+                display: none;
+                &_burger {
+                    display: flex;
+                }
+            }
+            &-menu {
+                display: flex;
+            }
+        }
+        &__burger {
+            display: flex;
+        }
+    }
+}

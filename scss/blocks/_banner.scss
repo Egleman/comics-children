@@ -1,0 +1,207 @@
+.banner {
+    background: url('../img/bg/1.jpg') center/cover no-repeat;
+    min-height: 700px;
+    padding: 35px 0px 50px 0px;
+    box-sizing: border-box;
+    &__fly {
+        margin: 0 auto;
+        max-width: 267px;
+        width: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 70px;
+    }
+    &__left {
+        display: flex;
+        flex-direction: column;
+        max-width: 550px;
+        width: 100%;
+    }
+    &__family {
+        max-width: 500px;
+        width: 100%;
+        margin-left: auto;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__button {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background: #8F3EB0;
+        border: 3px solid #434343;
+        box-shadow: 4px 4px 10px #524267;
+        border-radius: 120px;
+        height: 80px;
+        box-sizing: border-box;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: 0.3em;
+        color: #FFFFFF;
+        &_mobile {
+            display: none;
+        }
+    }
+    &__right {
+        max-width: 550px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        &-wr {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            margin-bottom: 30px;
+            p {
+                font-weight: 600;
+                font-size: 33px;
+                line-height: 49px;
+                color: #8F3EB0;
+            }
+        }
+        ul {
+            li {
+                &:not(:last-of-type) {
+                    margin-bottom: 15px;
+                }
+                div {
+                    display: flex;
+                    gap: 20px;
+                    p {
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 24px;
+                        color: #685A7B;
+                        span {
+                            font-weight: 700;
+                        }
+                    }
+                    img {
+                        min-width: 15px;
+                        height: 15px;
+                        padding-top: 5px;
+                    }
+                }
+            }
+        }
+    }
+    &__logo {
+        max-width: 200px;
+        width: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+@media (max-width: 1230px) {
+    .banner {
+        &__right {
+            &-wr {
+                p {
+                    font-size: 28px;
+                    line-height: 38px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1022px) {
+    .banner {
+        min-height: auto;
+        &__fly {
+            max-width: 200px;
+        }
+        &__right {
+            &-wr {
+                p {
+                    font-size: 20px;
+                    line-height: 28px;
+                }
+            }
+        }
+        &__logo {
+            max-width: 150px;
+        }
+    }
+}
+@media (max-width: 798px) {
+    .banner {
+        padding: 80px 0px 0px 0px;
+        background: url('../img/bg/2.jpg') top/contain no-repeat, #add2e4;
+        &__fly {
+            display: none;
+        }
+        &__wrapper {
+            flex-direction: column;
+            gap: 30px;
+        }
+        &__left {
+            order: 2;
+        }
+        &__right {
+            order: 1;
+            &-wr {
+                flex-direction: column;
+                gap: 10px;
+                p {
+                    order: 1;
+                    br {
+                        display: none;
+                    }
+                }
+            }
+        }
+        &__logo {
+            order: 2;
+            max-width: 400px;
+        }
+        &__button {
+            display: none;
+            &_mobile {
+                display: flex;
+                margin: 0 auto 30px;
+                height: 70px;
+                max-width: 400px;
+            }
+        }
+    }
+}
+@media (max-width: 606px) {
+    .banner {
+        &__right {
+            order: 1;
+            &-wr {
+                p {
+                    line-height: 42px;
+                }
+            }
+        }
+        &__button {
+            font-size: 18px;
+            line-height: 32px;
+        }
+    }
+}
+@media (max-width: 405px) {
+    .banner {
+        &__button {
+            font-size: 14px;
+            height: 50px;
+        }
+    }
+}

@@ -1,0 +1,188 @@
+.footer {
+    display: flex;
+    min-height: 700px;
+    &__contacts {
+        width: 50%;
+        background: url('../img/bg/7.png') center/cover no-repeat, linear-gradient(#8F3EB0, #8F3EB0);
+        padding-left: 15px;
+        box-sizing: border-box;
+    }
+    &__map {
+        width: 50%;
+    }
+    &__wrapper {
+        max-width: 600px;
+        width: 100%;
+        margin-left: auto;
+        box-sizing: border-box;
+        padding: 100px 40px 40px 0px;
+    }
+    &__left {
+        position: relative;
+        max-width: 434px;
+        width: 100%;
+        height: 125px;
+        margin-left: -24%;
+        margin-bottom: 60px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        p {
+            position: absolute;
+            top: 30%;
+            right: 14%;
+            font-family: 'Housearama', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 40px;
+            color: #181818;
+            max-width: max-content;
+        }
+    }
+    ul {
+        margin-bottom: 115px;
+        li {
+            &:not(:last-of-type) {
+                margin-bottom: 30px;
+            }
+            a {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+                font-family: 'Housearama', sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 40px;
+                color: #FFFFFF;
+                svg {
+                    display: flex;
+                    flex-shrink: 0;
+                    width: 30px;
+                }
+            }
+            div {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+                svg {
+                    display: flex;
+                    flex-shrink: 0;
+                    width: 30px;
+                }
+                p {
+                    font-family: 'Housearama', sans-serif;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 40px;
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+    &__social {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__buttons {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        a {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            border-radius: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    &__link {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        a {
+            font-size: 16px;
+            line-height: 23px;
+            text-align: right;
+            text-decoration-line: underline;
+            color: #FFFFFF;
+        }
+    }
+}
+@media (max-width: 1022px) {
+    .footer {
+        flex-direction: column;
+        &__contacts {
+            width: 100%;
+            padding: 0;
+        }
+        &__wrapper {
+            max-width: 798px;
+            margin: 0 auto;
+            padding: 60px 15px 40px 15px;
+            box-sizing: border-box;
+        }
+        &__left {
+            margin-left: -17%;
+        }
+        &__map {
+            height: 385px;
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 606px) {
+    .footer {
+        &__left {
+            height: 60px;
+            max-width: 252px;
+            min-width: 252px;
+            margin-bottom: 40px;
+            margin-left: -12%;
+            p {
+                font-size: 18px;
+                line-height: 30px;
+                top: 23%;
+            }
+        }
+        ul {
+            margin-bottom: 30px;
+        }
+        &__social {
+            flex-direction: column;
+            gap: 30px;
+            align-items: initial;
+        }
+    }
+}
+@media (max-width: 405px) {
+    .footer {
+        &__left {
+            margin-left: -22%;
+        }
+        ul {
+            li {
+                a {
+                    font-size: 14px;
+                }
+                div {
+                    p {
+                        font-size: 14px;
+                        line-height: 24px;
+                        br {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

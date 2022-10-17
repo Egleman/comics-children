@@ -1,0 +1,203 @@
+.reviews {
+    padding: 265px 0px 215px 0px;
+    background: url('../img/bg/6.svg') center/cover no-repeat;
+    &__right {
+        margin-left: auto;
+        margin-right: -12%;
+        position: relative;
+        max-width: 787px;
+        height: 125px;
+        margin-bottom: 50px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        p {
+            position: absolute;
+            top: 30%;
+            left: 11%;
+            font-family: 'Housearama', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 40px;
+            color: #181818;
+        }
+    }
+    &__slider {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        margin-bottom: 60px;
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #8F3EB0;
+            border-radius: 10px;
+            width: 100px;
+            height: 100px;
+            border: none;
+            flex-shrink: 0;
+        }
+    }
+    &__card {
+        background: #FFFFFF;
+        border: 3px solid #434343;
+        border-radius: 10px;
+        box-sizing: border-box;
+        padding: 20px 20px 25px 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        &-link {
+            width: 100%;
+            min-height: 350px;
+            display: flex;
+            justify-content: center;
+            padding-top: 125px;
+            margin-bottom: 30px;
+            box-sizing: border-box;
+            img {
+                width: 60px;
+                height: 60px;
+            }
+            &_1 {
+                background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../img/slides/7.jpg') center/cover no-repeat;
+            }
+            &_2 {
+                background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../img/slides/8.jpg') center/cover no-repeat;
+            }
+            &_3 {
+                background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../img/slides/9.jpg') center/cover no-repeat;
+            }
+            &_4 {
+                background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../img/slides/10.jpg') center/cover no-repeat;
+            }
+        }
+        &-name {
+            font-family: 'Housearama', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 28px;
+            text-align: center;
+            color: #5E4383;
+        }
+    }
+    &__buttons {
+        display: none;
+        align-items: center;
+        gap: 30px;
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #8F3EB0;
+            border-radius: 10px;
+            width: 100px;
+            height: 100px;
+            border: none;
+            flex-shrink: 0;
+        }
+    }
+    &__button {
+        margin: 0 auto;
+        max-width: 550px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #8F3EB0;
+        border: 3px solid #434343;
+        box-shadow: 4px 4px 10px #524267;
+        border-radius: 120px;
+        height: 80px;
+        box-sizing: border-box;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: 0.3em;
+        color: #FFFFFF;
+    }
+}
+@media (max-width: 1230px) {
+    .reviews {
+        padding: 185px 0px 215px 0px;
+        &__card {
+            &-link {
+                width: 100%;
+            }
+        }
+    }
+}
+@media (max-width: 1022px) {
+    .reviews {
+        &__right {
+            margin-right: -18%;
+        }
+        &__slider {
+            button {
+                display: none;
+            } 
+        }
+        &__buttons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+    }
+}
+@media (max-width: 798px) {
+    .reviews {
+        &__right {
+            p {
+                left: 6%;
+            }
+        }
+    } 
+}
+@media (max-width: 606px) {
+    .reviews {
+        padding: 110px 0px 140px 0px;
+        &__right {
+            width: 303px;
+            height: 85px;
+            margin-right: -12%;
+            p {
+                font-size: 18px;
+                line-height: 30px;
+                left: 10%;
+                top: 15%;
+                max-width: max-content;
+            }
+        }
+        &__buttons {
+            button {
+                width: 50px;
+                height: 50px;
+                svg {
+                    width: 14px;
+                    height: 23px;
+                }
+            }
+        }
+        &__button {
+            max-width: 400px;
+            font-size: 18px;
+            line-height: 32px;
+            height: 70px;
+        }
+    }
+}
+@media (max-width: 400px) {
+    .reviews {
+        &__right {
+            margin-right: -19%;
+        }
+        &__button {
+            font-size: 12px;
+            height: 50px;
+        }
+    }
+}
